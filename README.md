@@ -5,6 +5,6 @@ My name is Saurabh Sharma. I'm from India, and currently studying at Kumamoto Na
 
 ### 📫 How to reach me:
 
-LinkedIn: https://www.linkedin.com/in/srbhshrm/ <br />
-Facebook: https://www.facebook.com/srbhshrm <br />
-Instagram: https://www.instagram.com/saurabh_ito_me/ <br />
+LinkedIn: <a href="https://www.linkedin.com/in/srbhshrm/" target="_blank">https://www.linkedin.com/in/srbhshrm/</a> <br />
+Facebook: <a href="https://www.facebook.com/srbhshrm" target="_blank">https://www.facebook.com/srbhshrm</a> <br />
+Instagram: <a href="https://www.instagram.com/saurabh_ito_me/" target="_blank">https://www.instagram.com/saurabh_ito_me/</a> <br />
