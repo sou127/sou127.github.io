@@ -35,7 +35,6 @@ $(document).ready(function(){
       var newDataB = Math.floor(Math.random() * (max - min + 1) + min);
 
       var newDataA = Math.floor(Math.random() * (max - min + 1) + min);
-      console.log(newDataA);
 
       document.getElementById("bpmval").innerHTML = newDataA;
       if ((newDataA) >= 120 || (newDataA <= 80)){
@@ -75,7 +74,17 @@ $(document).ready(function(){
   
     setInterval(function(){
       updateData(data);
-      myNewChart.Line(data, optionsNoAnimation)
-      ;}, 2000
+      myNewChart.Line(data, optionsNoAnimation);
+      var temp = (Math.floor((Math.random() * (38 - 34 + 1) + 34) * (10) + 100) / 100) + 32;
+      document.getElementById("tempval").innerHTML = temp;
+      if (temp <= 34.00 || temp >= 37.8){
+        document.getElementById("tempval").setAttribute("style", "color:red;");
+      }else{
+        document.getElementById("tempval").setAttribute("style", "color:blue;");
+      }
+      ;}, 4000
     );
 });
+
+
+
