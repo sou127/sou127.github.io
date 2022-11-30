@@ -1,307 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="title" property="og:title" content="Portfolio Website of Saurabh Sharma">
-  <meta name="description" content="Personal Portfolio of Saurabh Sharma, a MEXT Scholar and an Undergraduate Student at Kumamoto National Institute of Technology.">
-  <meta name="keywords" content="Saurabh, MEXT, KNCT, Kumamoto, Frontend, ML, JavaScript, HTML, CSS">
-  <meta name="author" content="Saurabh Sharma">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saurabh Sharma</title>
-  <link rel="icon" type="image/png" href="images/portrait2.jpg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Saurabh Sharma</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://saurabhsharma.codes/" class="link"
+          >Saurabh S.</a
+        >
+      </h3>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#education">Education</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#internships">Experience</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#scholarships">Scholarships</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
 
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/topnavbar.css">
-  <link rel="stylesheet" href="assets/css/sections.css">
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1>Hi, I am <span class="about__name">Saurabh</span></h1>
+        <!-- <h2 class="about__role">A Front end Developer.</h2>
+        <p class="about__desc">
+          Consectetur neque sed quam molestiae consectetur nesciunt sit alias
+          Vitae libero perferendis reprehenderit optio veritatis Accusantium at
+          voluptatum cumque temporibus et Explicabo iste porro quis numquam
+          distinctio Repellendus adipisci nam perferendis amet eaque hic
+          Voluptates
+        </p> -->
 
-<body>
-  <nav class="navbar navbar-light navbar-expand-lg navigation-clean">
-    <div class="container"><a class="navbar-brand" onclick="scrollSmoothTo('about')">Saurabh Sharma</a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div id="navcol-1" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link education-link" onclick="scrollSmoothTo('education')">Education</a></li>
-                <li class="nav-item"><a class="nav-link experiences-link" onclick="scrollSmoothTo('experiences')">Experience</a></li>
-                <li class="nav-item"><a class="nav-link projects-link" onclick="scrollSmoothTo('projects')">Projects</a></li>
-                <li class="nav-item"><a class="nav-link awards-link" onclick="scrollSmoothTo('awards')">Awards</a></li>
-                <li class="nav-item"><a class="nav-link jp-link" href="/jp/">日本語</a></li>
-                
-                </li>
-            </ul>
+        <div class="about__contact center">
+          <a href="files/30112022_SharmaSaurabh.pdf" target="_blank">
+            <span class="btn btn--outline">Resume</span>
+          </a>
+
+          <a
+            href="https://github.com/sou127"
+            aria-label="github"
+            target="_blank"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://linkedin.com/in/sou127"
+            aria-label="linkedin"
+            target="_blank"
+            class="link link--icon"
+          >
+            <i aria-hidden="true" class="fab fa-linkedin"></i>
+          </a>
         </div>
-    </div>
-  </nav>
+      </div>
 
-  <span class="anchor" id="about"></span>
-  <section  class="home-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12">
-          <div id="profile">
-            <img class="portrait" src="images/portrait2.jpg" alt="Saurabh Sharma">
-            <div class="portrait-title">
-              <h2>Saurabh Sharma</h2>
-              <h3>Undergraduate Student</h3>
-              <h3><a target="_blank" href="https://kumamoto-nct.ac.jp/english-home.html">NIT Kumamoto</a></h3>
+
+      <!-- Education -->
+      <section id="education" class="section education">
+        <h2 class="section__title">Education</h2>
+
+        <div class="education__grid">
+
+          <div class="school">
+            <div class="school__header">
+              <span><img src="images/nitklogo.png" alt="AWS"></span>
             </div>
-            <ul class="network-icon" aria-hidden="true">
-              <li>
-                <a href="resume/English_Resume.pdf" target="_blank">
-                  <i class="ai ai-cv big-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/sou127" target="_blank">
-                  <i class="fab fa-github big-icon"></i>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/srbhshrm" target="_blank">
-                  <i class="fab fa-linkedin big-icon"></i>
-                </a>
-              </li>
-            </ul>
+            <div class="school__description">
+              <div class="company"><h3>National Institute of Technology, Kumamoto College</h3></div>
+              <p>
+              Associate in Control and Information Systems Engineering, <span class="duration">&nbsp;2021 ~ 2024</span>
+              </p> 
+            </div>
+          </div>
+
+          <div class="school">
+            <div class="school__header">
+              <span><img src="images/jassologo.jpg" alt="AWS"></span>
+            </div>
+            <div class="school__description">
+              <div class="company"><h3>JASSO Tokyo Japanese Language Education Center</h3></div>
+              <p>
+              Japanese Studies, <span class="duration">&nbsp;2020 ~ 2021</span>
+              </p> 
+            </div>
+          </div>
+
+          <div class="school">
+            <div class="school__header">
+              <span><img src="images/ashokalogo.jpg" alt="AWS"></span>
+            </div>
+            <div class="school__description">
+              <div class="company"><h3>Ashoka University</h3></div>
+              <p>
+              B.Sc. in Computer Science, <span class="duration">&nbsp;2019 (Withdrawn)</span>
+              </p> 
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Internships -->
+      <section id="internships" class="section internships">
+        <h2 class="section__title">Experience</h2>
+
+        <div class="interns__grid">
+          
+
+          <div class="intern">
+            <div class="intern__header">
+              <span><img src="images/awslogo_nt.png" alt="AWS"></span>
+            </div>
+            <div class="intern__description">
+              <div class="company"><h3>AWS Japan</h3> <span class="duration">&nbsp;(2022 Dec.)</span></div>
+              <p>
+              Cloud Support Engineer Intern
+              </p> 
+            </div>
+          </div>
+
+          <div class="intern">
+            <div class="intern__header">
+              <span><img src="images/zozologo.png" alt="ZOZO"></span>
+            </div>
+            <div class="intern__description">
+              <div class="company"><h3>ZOZO, Inc</h3> <span class="duration">&nbsp;(2022 Sep.)</span></div>
+              <p>
+              Worked on the backend development of ZOZOTOWN's search API
+              </p> 
+            </div>        
+          </div>
+
+          <div class="intern">
+            <div class="intern__header">
+              <span><img src="images/whilogo.jpg" alt="WHI"></span>
+            </div>
+            <div class="intern__description">
+              <div class="company"><h3>Works Human Intelligence</h3> <span class="duration">&nbsp;(2022 Sep.)</span></div>
+              <p>
+              Involved group discussions and developing a Software Solution for Hospitals
+              </p> 
+            </div>
+          </div>
+
+          <div class="intern">
+            <div class="intern__header">
+              <span><img src="images/tdcsoftlogo.jpg" alt="TDC Soft"></span>
+            </div>
+            <div class="intern__description">
+              <div class="company"><h3>TDC SOFT Inc</h3> <span class="duration">&nbsp;(2022 Aug.)</span></div>
+              <p>
+              Developed a LINE Restaurant Finder bot using Python and AWS Lambda
+              </p> 
+            </div>
           </div>
         </div>
-        <div class="col-lg-8 col-12">
-          <p>
-            Hello! I am Saurabh, a MEXT Scholar and an undergraduate student at
-            <a target="_blank" href="https://kumamoto-nct.ac.jp/english-home.html">Kumamoto National Institute of Technology (KNCT)</a>.
-             At KNCT, I am pursuing Engineering Studies in the
-            <a target="_blank" href="https://kumamoto-nct.ac.jp/english-home/department/department-of-control-and-information-systems-engineering.html">Department of Control and Information Systems Engineering</a>. 
-            My interests are Machine Learning and Frontend Development. I also like to participate in Hackathons and Competitive Coding every once in a while.
+      </section>
 
-             
-             <div class="skills">
-              <strong style="font-size: 20px;">Skills</strong><br/>
-              <div class="row">
-                <div class="col-4">
-                  <strong>Programming languages</strong><br />
-                </div>
-                <div class="col-8">
-                  JavaScript, Python, C, C++, Java<br />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-4">
-                  <strong>Tools and Libraries</strong><br />
-                </div>
-                <div class="col-8">
-                  React Native, React, HTML, CSS, Bootstrap, JQuery<br />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-4">
-                  <strong>Experienced with</strong><br />
-                </div>
-                <div class="col-8">
-                  Git, Firebase, Tableau<br />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-4">
-                  <strong>Languages</strong><br />
-                </div>
-                <div class="col-8">
-                  English (fluent), Japanese (fluent), Hindi (native)<br />
-                </div>
-              </div>
-             </div>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <span class="anchor" id="education"></span>
-  <section  class="home-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12 section-heading">
-          <h1>Education</h1>
-        </div>
-        <div class="col-lg-8 col-12">
-          <h4>Kumamoto National Institute of Technology</h4>
-          <p style="padding-left:20px;">Associate's in <strong>Control and Information Systems Engineering</strong>, Apr. 2021 - Mar. 2024 (expected)</p>
-          
-          <h4>JASSO Tokyo Japanese Language Education Center</h4>
-          <p style="padding-left:20px;">Diploma in <strong>Japanese Language Course</strong>, Sep. 2021 - Mar. 2022</p>
 
-          <h4>Ashoka University</h4>
-          <p style="padding-left:20px;">Bachelor of <strong>Computer Science and Mathematics</strong>, Aug. 2020 - Feb. 2021 (withdrew)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <span class="anchor" id="experiences"></span>
-  <section class="home-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12 section-heading">
-          <h1>Internships</h1>
-        </div>
-        <div class="col-lg-8 col-12">
-          <h5 id="iOS-intern">Backend Intern, ZOZO Inc.</h5>
-          <p style="padding-left:20px;">Worked on the search API of ZOZOTOWN, Jun. 2020 - Aug. 2020</p>
-          <h5 id="iOS-intern">Summer Intern, TDC Soft Inc.</h5>
-          <p style="padding-left:20px;">A 2-week LINE BOT Development Internship, Jun. 2020 - Aug. 2020</p>
-          <h5 id="iOS-intern">Intern, Works Human Intelligence</h5>
-          <p style="padding-left:20px;">A 3-day internship on product development through group work, Jun. 2020 - Aug. 2020</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <span class="anchor" id="projects"></span>
-  <!-- <section class="home-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12 section-heading">
-          <h1>Projects</h1>
-        </div>
-        <div class="col-lg-8 col-12">
-          <h5>COVID Tracking Website
-          </h5>
-          <ul>
-            <li>
-              Link:
-              <a class="project-link" href="https://github.com/sou127/COVID-Tracker-with-React" target="_blank">
-                Source code
-                <i class="fab fa-github"></i>
-              </a> 
-              <a class="project-link" href="https://trackcovid-react.herokuapp.com/">
-                Web page
-                <i class="fas fa-globe"></i>
-              </a>
-            </li>
-            <li>Tech Stack: <strong>HTML, CSS, JavaScript (React)</strong></li>
-            <li>A visual live dashboard to display everyday covid cases around the world using disease.sh API</li>
-          </ul>
+      <!-- Scholarships -->
+      <section id="scholarships" class="section education">
+        <h2 class="section__title">Scholarships</h2>
 
-          <h5>K-Connect
-          </h5>
-          <ul>
-            <li>
-              Links: 
-              <a class="project-link" href="https://github.com/sou127/K-Connect" target="_blank">
-                Source code
-                <i class="fab fa-github"></i>
-              </a>
-              <a class="project-link" href="https://kconnect.netlify.app/">
-                Web page
-                <i class="fas fa-globe"></i>
-              </a>
-            </li>
-            <li>Tech Stack: <strong>Python (Django, BeautifulSoup), JavaScript (React, NodeJs, Socketio), HTML5, CSS3</strong></li>
-            <li>A web application built for NITK Hackathon, having functionalities like Online IDE, Whiteboard and Chat Option</li>
-          </ul>
+        <div class="education__grid">
 
-          <h5>sou127.github.io
-          </h5>
-          <ul>
-            <li>
-              Links:
-              <a class="project-link" href="https://github.com/sou127/sou127.github.io" target="_blank">
-                Source code
-                <i class="fab fa-github"></i>
-              </a> 
-              <a class="project-link" href="https://saurabhsharma.codes/">
-                Web page
-                <i class="fas fa-globe"></i>
-              </a>
-            </li>
-            <li>Tech Stack: <strong>HTML, CSS, Bootstrap, JavaScript, JQuery</strong></li>
-            <li>Wrote personal portfolio web page that outlines my professional experience as well as extracurricular activities</li>
-          </ul>
+          <div class="school">
+            <div class="school__header">
+              <span><img src="images/awslogo_nt.png" alt="AWS"></span>
+            </div>
+            <div class="school__description">
+              <div class="company"><a href="https://aws.amazon.com/jp/machine-learning/scholarship/" target="_blank"><h3>AWS AI & ML Scholarship</h3></a></div>
+              <p>
+                <span class="duration">2022 ~ 2023</span>
+              </p> 
+            </div>
+          </div>
 
-          
+          <div class="school">
+            <div class="school__header">
+              <span><img src="images/mextlogo.jpg" alt="AWS"></span>
+            </div>
+            <div class="school__description">
+              <div class="company"><a href="https://www.mext.go.jp/a_menu/koutou/ryugaku/06032818.htm" target="_blank"><h3>Japanese Government (MEXT) Scholarship</h3></a></div>
+              <p>
+                <span class="duration">2020 ~ 2024</span>
+              </p> 
+            </div>
+          </div>
+
+          <div class="school">
+            <div class="school__header">
+              <span><img src="images/ashokalogo.jpg" alt="AWS"></span>
+            </div>
+            <div class="school__description">
+              <div class="company"><h3>Full Financial Aid for Higher Studies, Ashoka University</h3></div>
+              <p>
+                <span class="duration">2019 ~ 2020</span>
+              </p> 
+            </div>
+          </div>
+
         </div>
-      </div>
-    </div>
-  </section> -->
-  <span class="anchor" id="awards"></span>
-  <section class="home-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12 section-heading">
-          <h1>Awards</h1>
-        </div>
-        <div class="col-lg-8 col-12">
-          <ul>
-            <li>
-              2022~ AWS AI & ML Scholarship <a target="_blank" href="https://aws.amazon.com/machine-learning/scholarship/"><strong>AI Programming with Python Nanodegree</strong></a>
-            </li>
-            <li>
-              2021 Fighting-Spirit Award <a target="_blank" href="https://kumamoto-nct.ac.jp/award/2022/01/20220128c/"><strong>1st Japanese National College of Technology Space Contest</strong> </a>
-            </li>
-            <li>
-              2020~ Full Financial Aid for Higher Studies in Japan <strong>Japanese Government MEXT Scholarship</strong>
-            </li>
-            <li>
-              2021 Open-Theme Award <strong>NITK Hackathon</strong>
-            </li>
-            <li>
-              2018 International Rank 596 <strong>SOF International English Olympiad</strong> <a target="_blank" href="https://drive.google.com/open?id=1-8oFixJQbb_YVXRG_BwP9uXgUFYpo7Ku&authuser=ci19sharma%40g.kumamoto-nct.ac.jp&usp=drive_fs">2018</a>
-            </li>
+      </section>
+
             
-          </ul>
+
+      <!-- Projects -->
+      <section id="projects" class="section projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="projects__grid">
+          <div class="project">
+            <h3>COVID-19 Visual Tool</h3>
+            <p class="project__description">
+              <img src="images/coviddashboard.png" alt="COVID-Tracker-with-React">
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">CSS</li>
+              <li class="project__stack-item">HTML</li>
+            </ul>
+
+            <a
+              href="https://github.com/sou127/COVID-Tracker-with-React"
+              aria-label="source code"
+              class="link link--icon"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://trackcovid-react.herokuapp.com/"
+              aria-label="live preview"
+              class="link link--icon"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>MatchU</h3>
+            <p class="project__description">
+              <img src="images/matchu.png" alt="MatchU">
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">Firebase</li>
+              <li class="project__stack-item">Bootstrap</li>
+            </ul>
+
+            <a
+              href="https://github.com/sou127/matchu"
+              aria-label="source code"
+              class="link link--icon"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://matchu.tech/"
+              aria-label="live preview"
+              class="link link--icon"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          <div class="project">
+            <h3>Tsuhan - eCommerce</h3>
+            <p class="project__description">
+              <img src="images/tsuhanlogo.png" alt="">
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">React</li>
+              <li class="project__stack-item">Stripe JS</li>
+              <li class="project__stack-item">Material UI</li>
+            </ul>
+
+            <a
+              href=https://github.com/sou127/Tsuhan"
+              aria-label="source code"
+              class="link link--icon"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://tsuhan.netlify.app/"
+              aria-label="live preview"
+              class="link link--icon"
+              target="_blank"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          
         </div>
-      </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <ul class="skills__list">
+          <li class="skills__list-item btn btn--plain">HTML</li>
+          <li class="skills__list-item btn btn--plain">CSS</li>
+          <li class="skills__list-item btn btn--plain">JavaScript</li>
+          <li class="skills__list-item btn btn--plain">TypeScript</li>
+          <li class="skills__list-item btn btn--plain">React</li>
+          <li class="skills__list-item btn btn--plain">NodeJS</li>
+          <li class="skills__list-item btn btn--plain">Git</li>
+          <li class="skills__list-item btn btn--plain">SpringBoot</li>
+          <li class="skills__list-item btn btn--plain">Python</li>
+          <li class="skills__list-item btn btn--plain">CI/CD</li>
+          <li class="skills__list-item btn btn--plain">GCP/AWS</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact center footer" id="contact">
+        <h2 class="section__title">Contact</h2>
+        srbh453 [at] gmail.com
+        <!-- <a href="mailto:srbh453@gmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a> -->
+      </section>
+    </main>
+
+    <div class="scroll-container">
+    <div class="scroll-top">
+      <a aria-label="Scroll up" href="#top">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
     </div>
-  </section>
-  <span class="anchor" id="contact"></span>
-  <section class="home-section contact-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-12 section-heading">
-          <h1>Contact</h1>
-        </div>
-        <div class="col-lg-8 col-12">
-          <ul class="fa-ul">
-            <li class="contact-li"><i class="fa-li fas fa-envelope" aria-hidden="true"></i>
-              <span>srbh453 [at] gmail.com</span>
-            </li>
-            <li class="contact-li"><i class="fa-li fas fa-map-marker" aria-hidden="true"></i>
-              <span>Kumamoto, JP</span>
-            </li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- Bootstrap Components -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <!-- add JavaScript -->
-  <script src="assets/js/index.js" charset="utf-8"></script>
-  <script>
-    function scrollSmoothTo(elementId) {
-      var element = document.getElementById(elementId);
-
-      var headerOffset = 51;
-      var elementPosition = element.getBoundingClientRect().top;
-      var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-
-
-      // element.scrollIntoView({ block: 'start',  behavior: 'smooth' });
-    }
-  </script>
-</body>
-
+    <script src="./script.js"></script>
+  </body>
 </html>
